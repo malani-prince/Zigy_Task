@@ -1,0 +1,33 @@
+<html>
+<head>
+</head>
+<body>
+    <hr>
+    <h2>All Inserted List By user</h2>
+    <hr>
+
+    <table border=6>
+        <tr>
+          <th>ID</th>
+          <th>Text</th>
+          <th>Check Box</th>
+        </tr>
+        {% for row in DATA %}
+        <tr>
+          <td>{{ row.id }}</td>
+          <td>{{ row.Text }}</td>
+          <td>{{ row.CheckBox }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      <hr>
+      <form action='/update_list/update' method='post'>
+        <h2>Enter a List Id Which You want to update to </h2> 
+        <hr>
+         <h4><label name='id'>Id of CheckList: </name> <br></h4>   
+          <input type="id" name="id" placeholder="id">
+          <br><br><br>
+          <input type="submit" value="Submit">
+      </form>
+</body>
+</html>

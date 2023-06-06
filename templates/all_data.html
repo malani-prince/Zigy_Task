@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+  <hr>
+  <h2>All The Data about Enter CheckList</h2>
+  <hr>
+    <table border=3>
+        <tr>
+          <th>ID</th>
+          <th>Text</th>
+          <th>Check Box</th>
+        </tr>
+        {% for row in DATA %}
+        <tr>
+          <td>{{ row.id }}</td>
+          <td>{{ row.Text }}</td>
+          <td>{{ row.CheckBox }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      <hr>
+      <h3>If you want to update the List: <a href="http://127.0.0.1:5000/update_list">Click Me</a></h3>
+</body>
+</html>
